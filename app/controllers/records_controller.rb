@@ -1,5 +1,5 @@
 class RecordsController < ApplicationController
-  before_action :set_record, only: [:edit, :update]
+  before_action :set_record, only: [:edit, :update, :destroy]
   
   def top
   end
@@ -9,7 +9,11 @@ class RecordsController < ApplicationController
   end
   
   def new
-    @record = Record.new
+    if params[:back]
+      @record = Record.new(record_params)
+    else
+      @record = Record.new
+    end
   end
   
   def create
@@ -30,6 +34,16 @@ class RecordsController < ApplicationController
     else
       render 'edit'
     end
+  end
+  
+  def destroy
+    @record.destroy
+    redirect_to records_path, notice:"つぶやきを削除しました"
+  end
+  
+  def confirm
+    @record = Record.new(record_params)
+    render :new if @record.invalid?
   end
   
   private
