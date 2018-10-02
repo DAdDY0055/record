@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Udon</title>
+    <title>Record</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,21 @@
   </head>
 
   <body>
+    
+    <header>
+      <ul>
+        <li><a href="/">トップページ</a></li>
+        <li><a href="/records">記録一覧</a></li>
+        <li><a href="/records/new">新規投稿</a></li>
+      </ul>
+    </header>
+  
     <%= yield %>
+    
+    <footer>
+      <p>DIVE INTO CODE2018年8月期生</p>
+      <p>© Copyright Takuya Nakahara</p>
+    </footer>
+
   </body>
 </html>
