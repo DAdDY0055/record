@@ -2,19 +2,22 @@
 
 <p><%= notice %></p>
 
-<table>
-  <tr>
-    <th>内容</th>
-  </tr>
 
-<% @records.each do |record| %>
-  <tr>
-    <td><%= record.content %></td>
-    <td><%= link_to '記録を編集する', edit_record_path(record.id), data: { confirm: '本当に編集していいですか？'} %></td>
-    <td><%= link_to '記録を削除する', record_path(record.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %></td>
-  </tr>
-<% end %>
 
-</table>
+<div class="container">
+  <dl>
+    <% @records.each do |record| %>
+      <h3><%= record.content %></h3>
+      <button type="button" class="btn btn-info">
+        <%= link_to '編集', edit_record_path(record.id), data: { confirm: '本当に編集していいですか？'} %>
+      </button>
+      <button type="button" class="btn btn-warning">
+        <%= link_to '削除', record_path(record.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
+      </button>
+    <% end %>
+  </dl>
+</div>
 
-<%= link_to '新しくブログを作成する', new_record_path %>
+<button type="button" class="btn btn-default btn-lg">
+  <%= link_to '新しくブログを作成する', new_record_path %>
+</button>
