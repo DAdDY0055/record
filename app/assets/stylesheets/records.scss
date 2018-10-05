@@ -26,22 +26,6 @@ li{
   margin-top: 5px;
 }
 
-.container li{
-  margin: 0 auto;
-  padding: 2px;
-  border: solid #CCFFFF;
-}
-
-.container li[about]{
-  background-color:#2c3e50;
-  color: #FFFFFF;
-}
-
-.container li[explanatory]{
-  background-color: #FFFFCC;
-  color: #000000;
-}
-
 header {
   width: 100%;
   background-color: #2c3e50;
@@ -70,7 +54,7 @@ footer {
   background-color:#2c3e50;
   padding: 20px 0 10px 0;
   color: white;
-  margin: auto;
+  margin-top: 10px;
   padding-bottom: 10px;
   font-size: 12px;
   position: relative;
@@ -95,11 +79,19 @@ img {
   margin-right: auto;
 }
 
-.table {
-  display: inline-block;
-  text-align: center;
+.notice {
+  width: 100%;
+  font-size: 2rem;
 }
 
-.dt {
-  float: left;
+button {
+  margin: 2rem;
+}
+
+.record_tweet {
+  padding: 2rem;
+}
+
+.record_content_tabel {
+  font-size: 2rem;
 }

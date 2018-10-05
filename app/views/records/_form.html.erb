@@ -10,10 +10,12 @@
     </div>
   <% end %>
   <div class="record_tweet">
-    <%= form.text_field :content %>
+    <label class="record_content_tabel">本文:</label>
+    <%= form.text_field :content, :size=>"60" %>
   </div>
-  <%= form.submit %>
+  <%= form.submit(["記録する"]) %>
 <% end %>
 
-<%= link_to 'トップページへ', '' %>
-<%= link_to 'つぶやき一覧画面にもどる', records_path %>
+<button type="button" class="btn-primary btn-lg">
+  <%= link_to '記録一覧画面にもどる', records_path %>
+</button>
