@@ -85,7 +85,8 @@ img {
 }
 
 button {
-  margin: 2rem;
+  margin-left : 2rem;
+  margin-right: 2rem;
 }
 
 .record_tweet {
@@ -94,4 +95,17 @@ button {
 
 .record_content_tabel {
   font-size: 2rem;
+}
+
+#back_to_index {
+  margin-top: 2rem;
+}
+
+#back {
+  margin-top: 2rem;
+}
+
+.error {
+  background-color: #FF0000;
+  color : #FFFFFF;
 }

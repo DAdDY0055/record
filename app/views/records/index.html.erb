@@ -1,4 +1,4 @@
-<h1>つぶやき一覧</h1>
+<h1>記録一覧</h1>
 
   <p class="notice"><%= notice %></p>
 
@@ -8,7 +8,7 @@
     <% @records.each do |record| %>
       <h3><%= record.content %></h3>
       <button type="button" class="btn btn-info">
-        <%= link_to '編集', edit_record_path(record.id), data: { confirm: '本当に編集していいですか？'} %>
+        <%= link_to '編集', edit_record_path(record.id) %>
       </button>
       <button type="button" class="btn btn-warning">
         <%= link_to '削除', record_path(record.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
@@ -18,5 +18,5 @@
 </div>
 
 <button type="button" class="btn-primary btn-lg">
-  <%= link_to '新しくブログを作成する', new_record_path %>
+  <%= link_to '新規記録を作成する', new_record_path %>
 </button>

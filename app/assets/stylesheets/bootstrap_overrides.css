@@ -5,3 +5,9 @@
 .btn-primary a {
   color: #FFFFFF; 
 }
+
+.alert-warning {
+  font-size: 2rem;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
