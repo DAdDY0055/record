@@ -15,8 +15,8 @@
     <label class="record_content_tabel">本文:</label>
     <%= form.text_field :content, :size=>"60" %>
   </div>
-  <button type="button" class="btn-primary btn-lg">
-    <%= form.submit(["記録する"]) %>
+  <button type="button">
+    <%= form.submit '記録する', :class=> "btn-primary btn-lg" %>
   </button>
 <% end %>
 

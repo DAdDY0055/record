@@ -9,14 +9,14 @@
     <h3><%= @record.content %></h3>
   </dl>
 </div>
-  <button type="button" class="btn-primary btn-lg">
-    <%= form.submit '登録する' %>
+  <button type="button">
+    <%= form.submit '登録する', :class=> "btn-primary btn-lg"  %>
   </button>
 <% end %>
 
 <%= form_with(model: @record, url: new_record_path, local: true, method: 'get') do |form| %>
   <%= form.hidden_field :content %>
-  <button type="button" class="btn-primary btn-lg" id="back">
-    <%= form.submit '戻る', name: 'back' %>
+  <button type="button", id="back">
+    <%= form.submit '戻る', name: 'back', :class=> "btn-primary btn-lg" %>
   </button>
 <% end %>
