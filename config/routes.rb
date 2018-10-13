@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to: 'records#top'
+  root 'records#top'
 
   resources :records do
     collection do
